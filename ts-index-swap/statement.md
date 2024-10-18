@@ -1,0 +1,1 @@
+Write a TypeScript generic function that accepts two arguments: an array of a generic type and two indices. The function should swap the elements at the specified indices and return the modified array.
