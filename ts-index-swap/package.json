@@ -1,0 +1,13 @@
+{
+  "name": "ts-index-swap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc app",
+    "buildmon": "tsc -w app"
+  },
+  "author": "seifsheikhelarab",
+  "license": "ISC"
+}
