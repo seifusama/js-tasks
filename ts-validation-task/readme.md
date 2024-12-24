@@ -1,17 +1,37 @@
-Validation Task
+# Express Registration Form with Validation
 
-Implement a simple express application which includes a registration form. The form contains these fields:
+This project demonstrates a simple registration form using Express.js with server-side validation using the `express-validator` package. It validates various user input fields such as name, email, password, and birthdate before submission. If any validation fails, errors are sent back to the client. Otherwise, the form submission is considered successful.
 
-- Full Name (Can't contain numbers)
+## Features
 
-- Email (Must be valid and @gmail.com)
+- Validates **Full Name** (Only letters, no numbers)
+- Validates **Email** (Must be a valid Gmail address)
+- Validates **Password** (Must contain at least one number, one uppercase letter, and one lowercase letter, length between 8 and 64 characters)
+- Validates **Password Confirm** (Must match the original password)
+- Validates **Birthdate** (Day, Month, and Year must be valid integers within specific ranges)
 
-- Password (Must be between 8 and 64 characters, contain at least one number, one uppercase character and one lowercase character)
+## Folder Structure
 
-- Password Confirm (Must be same as password)
+- **index.ts**: Main server-side logic.
+- **views/index.ejs**: Frontend template that renders the registration form.
+- **.env**: Environment variables (e.g., server port).
+- **.gitignore**: Ignore unnecessary files (e.g., `node_modules`, `.env`).
 
-- Birthdate (Must be a date)
+## .env Example
 
-Perform server-side validation with express-validator or any other package, if there are any validation errors, send them back to the client. otherwise, send "SUCCESSFUL".
+```env
+PORT=5000
+```
 
-Note: Don't assign the port number directly to your code. Configure a .env file to carry the port number in a PORT variable. Don't forget to add the .env file to the ignored files by git. Use 5000 as a default value if the variable is not assigned.
+## Technologies Used
+
+- **Express.js**: Framework for building the server.
+- **express-validator**: Middleware for server-side form validation.
+- **EJS**: Templating engine for rendering views.
+- **dotenv**: Loads environment variables from the `.env` file.
+- **morgan**: HTTP request logger middleware.
+
+## Notes
+
+- The validation ensures that only valid data is submitted and provides feedback to the user when an error occurs.
+- The server runs on port `5000` by default, but this can be changed via the `.env` file.
